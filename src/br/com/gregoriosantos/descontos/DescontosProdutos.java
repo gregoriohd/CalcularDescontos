@@ -25,11 +25,12 @@ public class DescontosProdutos {
 	public double valorDescontos() {
 
 		if (getQuantidadeProdutos() > 10 && getQuantidadeProdutos() < 21)
-			return getProdutos().getValorProduto() * 0.1;
+			return getProdutos().getValorProduto() * getQuantidadeProdutos() * 0.1;
 		if (getQuantidadeProdutos() > 20 && getQuantidadeProdutos() < 51)
-			return getProdutos().getValorProduto() * 0.2;
-		if (getQuantidadeProdutos() > 51)
-			return getProdutos().getValorProduto() * 0.25;
+			return getProdutos().getValorProduto() * getQuantidadeProdutos() * 0.2;
+		if (getQuantidadeProdutos() > 50)
+			return getProdutos().getValorProduto() * getQuantidadeProdutos() * 0.25;
+		
 		return 0;
 	}
 
